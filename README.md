@@ -17,62 +17,10 @@ This repository compares how React projects differ when written using **JavaScri
 ---
 
 ## 🔍 Visual Difference Example
+## 📁 Folder Structure
 
-### ✅ JavaScript (React)
-
-```jsx
-// App.js
-import React, { useState } from 'react';
-
-function App() {
-  const [a, setA] = useState('');
-  const [b, setB] = useState('');
-  const [sum, setSum] = useState(null);
-
-  const handleCalculate = () => {
-    setSum(Number(a) + Number(b));
-  };
-
-  return (
-    <div>
-      <h1>🚀 JavaScript Calculator</h1>
-      <input onChange={(e) => setA(e.target.value)} />
-      <input onChange={(e) => setB(e.target.value)} />
-      <button onClick={handleCalculate}>Add</button>
-      <p>Result: {sum}</p>
-    </div>
-  );
-}
-
-export default App;
-```
-## ✅ TypeScript (React)
-```jsx
-// App.tsx
-import React, { useState } from 'react';
-
-const App: React.FC = () => {
-  const [a, setA] = useState<string>('');
-  const [b, setB] = useState<string>('');
-  const [sum, setSum] = useState<number | null>(null);
-
-  const handleCalculate = () => {
-    setSum(Number(a) + Number(b));
-  };
-
-  return (
-    <div>
-      <h1>🛡️ TypeScript Calculator</h1>
-      <input type="number" onChange={(e) => setA(e.target.value)} />
-      <input type="number" onChange={(e) => setB(e.target.value)} />
-      <button onClick={handleCalculate}>Add</button>
-      <p>Result: {sum}</p>
-    </div>
-  );
-};
-
-export default App;
-```
+- `js-version/` — React Calculator using JavaScript
+- `ts-version/` — React Calculator using TypeScript
 ## 📌 Summary
 
 Both **JS** and **TS** can build React apps.
