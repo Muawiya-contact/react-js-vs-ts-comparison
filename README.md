@@ -47,7 +47,7 @@ function App() {
 export default App;
 ```
 ## ✅ TypeScript (React)
-```
+```jsx
 // App.tsx
 import React, { useState } from 'react';
 
